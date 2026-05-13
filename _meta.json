@@ -1,0 +1,12 @@
+{
+  "slug": "feishu-usage-bar",
+  "name": "Feishu Usage Bar",
+  "displayName": "飞书用量进度条",
+  "description": "在飞书流式卡片底部追加 MiniMax API 配额进度条，实时显示用量、剩余时间和颜色分级。",
+  "author": "wangjipeng977",
+  "version": "1.0.0",
+  "tags": ["feishu", "minimax", "usage-bar", "streaming-card", "openclaw-lark"],
+  "license": "MIT",
+  "platform": "openclaw",
+  "requires": ["openclaw-lark"]
+}
