@@ -10,7 +10,7 @@ GREEN='\033[0;32m'
 RED='\033[0;31m'
 RESET='\033[0m'
 
-echo -e "${CYAN}Feishu Usage Bar Installer${RESET}"
+echo -e "${CYAN}OpenClaw Statusline for MiniMax (Feishu Platform) Installer${RESET}"
 echo ""
 
 # ---------------------------------------------------------------------------
@@ -122,7 +122,7 @@ find_lark_dir() {
 # Uninstall: restore backups
 # ---------------------------------------------------------------------------
 do_uninstall() {
-    echo -e "${CYAN}Feishu Usage Bar — Uninstall${RESET}"
+    echo -e "${CYAN}OpenClaw Statusline for MiniMax — Uninstall${RESET}"
     echo ""
 
     OPENCLAW_ROOT=$(find_openclaw_root) || exit 1

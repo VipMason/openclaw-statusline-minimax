@@ -1,6 +1,14 @@
-# Feishu Usage Bar
+# OpenClaw Statusline for MiniMax (Feishu Platform)
+
+[English](./README.md) | [中文](./README_zh.md)
+
+---
+
+# OpenClaw Statusline for MiniMax (Feishu Platform)
 
 A customized OpenClaw Feishu plugin that displays MiniMax API quota usage directly in the streaming card footer — including hourly/weekly usage, remaining time, and color-coded progress bars.
+
+## Preview
 
 ```
 已完成 · 耗时 16.3s · MiniMax-M2.7-highspeed
@@ -66,17 +74,6 @@ cp /tmp/feishu-usage-bar/patches/footer-config.js \
 #   streaming: true
 
 # 4. Restart
-openclaw gateway restart
-```
-
-## Uninstall
-
-Restore backups and restart:
-
-```bash
-cp ~/.openclaw/extensions/openclaw-lark/src/core/footer-config.js.bak.YYYYMMDD \
-   ~/.openclaw/extensions/openclaw-lark/src/core/footer-config.js
-# (same for streaming-card-controller.js and builder.js)
 openclaw gateway restart
 ```
 
