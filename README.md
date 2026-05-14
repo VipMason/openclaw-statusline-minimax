@@ -4,8 +4,6 @@
 
 ---
 
-# OpenClaw Statusline for MiniMax (Feishu Platform)
-
 A customized OpenClaw Feishu plugin that displays MiniMax API quota usage directly in the streaming card footer — including hourly/weekly usage, remaining time, and color-coded progress bars.
 
 ## Preview
