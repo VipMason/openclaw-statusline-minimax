@@ -75,6 +75,36 @@ find_openclaw_root() {
 }
 
 # ---------------------------------------------------------------------------
+# Check OpenClaw version (requires >= 2026.4.x for streaming card support)
+# ---------------------------------------------------------------------------
+check_openclaw_version() {
+    OC_BIN=""
+    for bin in openclaw "$HOME/.openclaw/bin/openclaw" "/usr/local/bin/openclaw"; do
+        if command -v "$bin" &> /dev/null; then
+            OC_BIN="$bin"
+            break
+        fi
+    done
+
+    if [ -z "$OC_BIN" ]; then
+        echo -e "${YELLOW}⚠ Cannot check version — openclaw CLI not in PATH${RESET}"
+        echo -e "   Please ensure OpenClaw >= 2026.4.x is installed"
+        return 0
+    fi
+
+    VER=$("$OC_BIN" --version 2>/dev/null | head -1 || echo "")
+    # Accept 2026.4.x or higher
+    if echo "$VER" | grep -qE '^2026\.([4-9]|[0-9]{2,})'; then
+        echo -e "${GREEN}✓ OpenClaw version: $VER${RESET}"
+    else
+        echo -e "${RED}✗ OpenClaw version too old: $VER${RESET}"
+        echo -e "   This plugin requires OpenClaw >= 2026.4.x for streaming card support"
+        echo -e "   Please upgrade: https://docs.openclaw.ai/getting-started/installation${RESET}"
+        exit 1
+    fi
+}
+
+# ---------------------------------------------------------------------------
 # Find openclaw-lark plugin
 # ---------------------------------------------------------------------------
 find_lark_dir() {
@@ -148,6 +178,11 @@ if [[ "$LARK_DIR" == *.disabled ]]; then
     LARK_DIR="$NEW_DIR"
     echo -e "${GREEN}✓ Plugin enabled${RESET}"
 fi
+
+# Version check
+echo ""
+echo -e "${CYAN}==> Checking OpenClaw version...${RESET}"
+check_openclaw_version
 
 # ---------------------------------------------------------------------------
 # Backup
