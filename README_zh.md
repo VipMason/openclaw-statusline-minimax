@@ -25,13 +25,13 @@
 ## 一键安装
 
 ```bash
-curl -sL https://raw.githubusercontent.com/VipMason/openclaw-statusline-minimax/main/install.sh | bash
+curl -sL https://raw.githubusercontent.com/VipMason/Openclaw-Statusline-for-MiniMax/main/install.sh | bash
 ```
 
 或克隆后运行：
 
 ```bash
-git clone https://github.com/VipMason/openclaw-statusline-minimax.git /tmp/feishu-usage-bar
+git clone https://github.com/VipMason/Openclaw-Statusline-for-MiniMax.git /tmp/feishu-usage-bar
 bash /tmp/feishu-usage-bar/install.sh
 ```
 

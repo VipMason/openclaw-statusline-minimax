@@ -25,13 +25,13 @@ A customized OpenClaw Feishu plugin that displays MiniMax API quota usage direct
 ## One-Line Install
 
 ```bash
-curl -sL https://raw.githubusercontent.com/VipMason/openclaw-statusline-minimax/main/install.sh | bash
+curl -sL https://raw.githubusercontent.com/VipMason/Openclaw-Statusline-for-MiniMax/main/install.sh | bash
 ```
 
 Or clone and run:
 
 ```bash
-git clone https://github.com/VipMason/openclaw-statusline-minimax.git /tmp/feishu-usage-bar
+git clone https://github.com/VipMason/Openclaw-Statusline-for-MiniMax.git /tmp/feishu-usage-bar
 bash /tmp/feishu-usage-bar/install.sh
 ```
 
@@ -54,7 +54,7 @@ cp ~/.openclaw/extensions/openclaw-lark/src/card/builder.js \
    ~/.openclaw/extensions/openclaw-lark/src/card/builder.js.bak
 
 # 2. Apply patches
-git clone https://github.com/VipMason/openclaw-statusline-minimax.git /tmp/feishu-usage-bar
+git clone https://github.com/VipMason/Openclaw-Statusline-for-MiniMax.git /tmp/feishu-usage-bar
 cp /tmp/feishu-usage-bar/patches/* \
    ~/.openclaw/extensions/openclaw-lark/src/card/
 cp /tmp/feishu-usage-bar/patches/footer-config.js \
